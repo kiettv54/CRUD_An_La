@@ -1,0 +1,43 @@
+<div class="row mt-5 mb-5">
+  <div class="col-md-4 mx-auto">
+<div class="card-header bg-danger">
+    <h4 style="text-align: center;">Customer</h4>
+  </div>
+    <div class="card card-body">
+  
+      <form class="form-signin" [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+        <div class="form-group" hidden>
+          <label>Id:</label>
+          <input type="text" class="form-control"  formControlName="id">
+        </div>
+        <div class="form-group">
+          <label>Name:</label>
+          <input type="text" class="form-control"  formControlName="name">
+        </div>
+        <div class="form-group">
+          <label>Mobile:</label>
+          <input type="text" class="form-control" formControlName="mobile">
+        </div>
+       
+        <div class="form-group" style="text-align: center;">
+          <br>
+          <div class="row">
+            <div class="col">
+                <button type="submit" class="btn btn-primary">Create</button>
+              </div>
+              <div class="col">
+                <button type="button" (click)="Update()" class="btn btn-primary" style="background-color:aquamarine;color:black">Update</button>
+                </div>
+                <div class="col">
+                    <button type="reset"  class="btn btn-danger">Reset</button>
+                    </div>
+
+          </div>
+
+        </div>
+  
+      </form>
+    </div>
+  </div>
+</div>
+  

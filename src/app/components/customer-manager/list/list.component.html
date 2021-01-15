@@ -1,0 +1,44 @@
+<style>
+  td,th{
+    text-align: center;
+  }
+</style>
+
+<div class="container">
+  <div class="table-responsive">
+      <div class="table-wrapper">
+          <div class="table">
+              <div class="row">
+                  <div class="col-sm-7"><h2>Customer <b></b></h2></div>
+                  <div class="col-sm-4" style="float:right">
+                      <div class="search-box">
+
+                          <input type="text" class="form-control" placeholder="Search&hellip;">
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <table class="table table-striped table-hover table-bordered">
+              <thead>
+                <tr>
+                  <td>Name</td>
+                  <td>Mobile</td>
+                  <td >Active</td>
+                </tr>
+              </thead>
+              <tbody *ngFor="let customer of customers">
+                <tr>
+                  <th>{{customer.name}}</th>
+                  <th>{{customer.mobile}}</th>
+                  <th>
+                    <button class="btn btn-primary" (click)="Edit(customer.id)" >Edit</button>&nbsp;
+                    <button class="btn btn-danger"  (click)="Delete(customer.id)" >Delete</button>
+              
+                  </th>
+                </tr>
+              </tbody>
+          </table>
+
+      </div>
+  </div>
+</div>
