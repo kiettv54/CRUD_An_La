@@ -55,6 +55,11 @@ export class FormComponent implements OnInit,OnDestroy {
     this.customer.addCustomer(customer).subscribe(result=>{
       if(result.status){
         alert(result.msg);
+        this.customerForm.patchValue({
+          id:'not set',
+          name:'',
+          mobile:''
+        });
         this.msg.SetMessage('Loading...');
       }
     },

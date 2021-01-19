@@ -17,7 +17,8 @@ export class ListComponent implements OnInit {
   ngOnInit() {
     this.getAll();
     this.msg.Source.subscribe(data=>{
-      this.getAll();
+      if(data !=='no')
+       this.getAll();
     });
   }
   getAll(){
